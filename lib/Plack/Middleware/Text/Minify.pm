@@ -1,5 +1,7 @@
 package Plack::Middleware::Text::Minify;
 
+# ABSTRACT: minify text responses on the fly
+
 use v5.10;
 
 use strict;
@@ -57,5 +59,51 @@ sub call {
     );
 
 }
+
+=head1 SYNOPSIS
+
+  use Plack::Builder;
+
+  builder {
+
+    enable "Text::Minify",
+        path => qr{\.(html|css|js)},
+        type => qr{^text/};
+
+  ...
+
+  };
+
+=head1 DESCRIPTION
+
+This middleware uses L<Text::Minify::XS> to remove indentation and
+trailing whitespace from text content.
+
+=attr path
+
+This is a regex or callback that matches against C<PATH_INFO>.  If it
+does not match, then the response won't be minified.
+
+The callback takes the C<PATH_INFO> and Plack environment as arguments.
+
+By default, it will match against any path.
+
+=attr type
+
+This is a regex or callback that matches against the content-type. If it
+does not match, then the response won't be minified.
+
+The callback takes the content-type header and the Plack reponse as
+arguments.
+
+By default, it will match against any "text/" MIME type.
+
+=head1 SEE ALSO
+
+L<Text::Minify::XS>
+
+L<PSGI>
+
+=cut
 
 1;
