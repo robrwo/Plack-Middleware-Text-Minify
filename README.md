@@ -48,6 +48,13 @@ arguments.
 
 By default, it will match against any "text/" MIME type.
 
+# KNOWN ISSUES
+
+## Support for older Perl versions
+
+This module requires Perl v5.9.3 or newer, which is the minimum
+version supported by [Text::Minify::XS](https://metacpan.org/pod/Text::Minify::XS).
+
 # SEE ALSO
 
 [Text::Minify::XS](https://metacpan.org/pod/Text::Minify::XS)

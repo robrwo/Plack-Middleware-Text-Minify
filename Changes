@@ -4,5 +4,8 @@ Revision history for {{ $dist->name }}:
   [Enhancements]
   - Downgrade minimum version to v5.9.3 (same as Text::Minify::XS).
 
+  [Documentation]
+  - Add note to KNOWN ISSUES about older Perl versions.
+
 v0.1.0    2020-12-11 12:15:09+00:00 Europe/London
   - Initial release.
