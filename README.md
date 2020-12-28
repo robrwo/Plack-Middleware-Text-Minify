@@ -36,7 +36,8 @@ does not match, then the response won't be minified.
 
 The callback takes the `PATH_INFO` and Plack environment as arguments.
 
-By default, it will match against any path.
+By default, it will match against any path except for HTTP status
+codes with no bodies, or request methods other than `GET` or `POST`.
 
 ## type
 

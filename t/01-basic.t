@@ -14,6 +14,7 @@ use Plack::Test;
 
 my $handler = builder {
 
+    enable "Head";
     enable "Text::Minify";
     enable "ContentLength";
 
@@ -62,6 +63,14 @@ test_psgi
             my $res = $cb->($req);
 
             like $res->content, qr/\n[ ]/, "has leading spaces";
+        };
+
+        subtest 'head' => sub {
+
+            my $req = HEAD '/';
+            my $res = $cb->($req);
+
+            unlike $res->content, qr/\n[ ]/, "no leading spaces";
         };
 
 };

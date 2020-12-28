@@ -23,6 +23,11 @@ sub call {
 
     my $res = $self->app->($env);
 
+    my $method = $env->{REQUEST_METHOD};
+    unless ($method =~ /^(GET|POST)$/) {
+        return $res;
+    }
+
     if (my $match = $self->path) {
 
         my $path = $env->{PATH_INFO};
@@ -42,6 +47,8 @@ sub call {
             return unless is_arrayref($res);
 
             return if @$res < 3;
+
+            return if Plack::Util::status_with_no_entity_body( $res->[0] );
 
             my $type = Plack::Util::header_get( $res->[1], 'content-type' );
             if ( my $match = $self->type ) {
@@ -90,7 +97,8 @@ does not match, then the response won't be minified.
 
 The callback takes the C<PATH_INFO> and Plack environment as arguments.
 
-By default, it will match against any path.
+By default, it will match against any path except for HTTP status
+codes with no bodies, or request methods other than C<GET> or C<POST>.
 
 =attr type
 

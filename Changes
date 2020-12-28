@@ -7,6 +7,10 @@ Revision history for {{ $dist->name }}:
   [Bug Fixes]
   - Skip if the response is missing a body.
 
+  - Skip if the response code does not have a body, GH#1.
+
+  - Skip if the request is not a GET or POST request, GH#1.
+
   [Documentation]
   - Add note to KNOWN ISSUES about older Perl versions.
 
