@@ -11,6 +11,8 @@ Revision history for {{ $dist->name }}:
 
   - Skip if the request is not a GET or POST request, GH#1.
 
+  - Update the Content-Length header, if it is set.
+
   [Documentation]
   - Add note to KNOWN ISSUES about older Perl versions.
 

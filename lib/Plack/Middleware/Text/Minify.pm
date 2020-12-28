@@ -65,6 +65,11 @@ sub call {
 
             $res->[2] = [ Text::Minify::XS::minify( join("", @$body ) ) ];
 
+
+            if (Plack::Util::header_exists( $res->[1], 'content-length' )) {
+                Plack::Util::header_set( $res->[1], 'content-length', length($res->[2]) );
+            }
+
             return;
         }
     );
