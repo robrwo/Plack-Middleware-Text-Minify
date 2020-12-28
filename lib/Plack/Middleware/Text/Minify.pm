@@ -41,6 +41,8 @@ sub call {
 
             return unless is_arrayref($res);
 
+            return if @$res < 3;
+
             my $type = Plack::Util::header_get( $res->[1], 'content-type' );
             if ( my $match = $self->type ) {
                 return

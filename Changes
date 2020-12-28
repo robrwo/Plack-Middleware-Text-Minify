@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Enhancements]
   - Downgrade minimum version to v5.9.3 (same as Text::Minify::XS).
 
+  [Bug Fixes]
+  - Skip if the response is missing a body.
+
   [Documentation]
   - Add note to KNOWN ISSUES about older Perl versions.
 
