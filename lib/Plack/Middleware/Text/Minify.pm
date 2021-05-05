@@ -12,7 +12,7 @@ use parent qw/ Plack::Middleware /;
 use Plack::Util;
 use Plack::Util::Accessor qw/ path type /;
 use Ref::Util qw/ is_arrayref is_coderef /;
-use Text::Minify::XS v0.3.6 ();
+use Text::Minify::XS v0.4.0 ();
 
 # RECOMMEND PREREQ:  Ref::Util::XS
 
