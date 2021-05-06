@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Bug Fixes]
   - Bump minimum version of Text::Minify::XS to v0.4.0.
 
+  [Documentation]
+  - Added note about whitespace cleanup in templating systems.
+
   [Tests]
   - Add more author tests.
 

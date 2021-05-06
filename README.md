@@ -56,6 +56,22 @@ By default, it will match against any "text/" MIME type.
 This module requires Perl v5.9.3 or newer, which is the minimum
 version supported by [Text::Minify::XS](https://metacpan.org/pod/Text::Minify::XS).
 
+## Use with templating directive that collapse whitespace
+
+If you are using a templating system with directives that collapse
+whitespace in HTML documents, e.g. in [Template-Toolkit](https://metacpan.org/pod/Template)
+
+```
+[%- IF something -%]
+  <div class="foo">
+    ...
+  </div>
+[%- END -%]
+```
+
+then you may find it worth removing these and letting the middleware
+clean up extra whitespace.
+
 # SEE ALSO
 
 [Text::Minify::XS](https://metacpan.org/pod/Text::Minify::XS)

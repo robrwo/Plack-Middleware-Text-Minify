@@ -122,6 +122,20 @@ By default, it will match against any "text/" MIME type.
 This module requires Perl v5.9.3 or newer, which is the minimum
 version supported by L<Text::Minify::XS>.
 
+=head2 Use with templating directive that collapse whitespace
+
+If you are using a templating system with directives that collapse
+whitespace in HTML documents, e.g. in L<Template-Toolkit|Template>
+
+    [%- IF something -%]
+      <div class="foo">
+        ...
+      </div>
+    [%- END -%]
+
+then you may find it worth removing these and letting the middleware
+clean up extra whitespace.
+
 =head1 SEE ALSO
 
 L<Text::Minify::XS>
