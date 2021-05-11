@@ -136,6 +136,12 @@ whitespace in HTML documents, e.g. in L<Template-Toolkit|Template>
 then you may find it worth removing these and letting the middleware
 clean up extra whitespace.
 
+=head2 Collapsed Newlines
+
+The underlying minifier does not understand markup, so newlines will
+still be collapsed in HTML elements where whitespace is meaningful,
+e.g. C<pre> or C<textarea>.
+
 =head1 SEE ALSO
 
 L<Text::Minify::XS>
