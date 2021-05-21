@@ -23,6 +23,8 @@ sub call {
 
     my $res = $self->app->($env);
 
+    return $res if $env->{'psgix.no-minify'};
+
     my $method = $env->{REQUEST_METHOD};
     unless ($method =~ /^(GET|POST)$/) {
         return $res;
@@ -94,6 +96,9 @@ sub call {
 
 This middleware uses L<Text::Minify::XS> to remove indentation and
 trailing whitespace from text content.
+
+It will be disabled if the C<psgix.no-minify> environment key is set
+to a true value.
 
 =attr path
 
