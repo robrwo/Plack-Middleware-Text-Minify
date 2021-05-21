@@ -98,7 +98,7 @@ This middleware uses L<Text::Minify::XS> to remove indentation and
 trailing whitespace from text content.
 
 It will be disabled if the C<psgix.no-minify> environment key is set
-to a true value.
+to a true value. (Added in v0.2.0.)
 
 =attr path
 

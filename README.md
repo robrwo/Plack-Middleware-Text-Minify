@@ -28,7 +28,7 @@ This middleware uses [Text::Minify::XS](https://metacpan.org/pod/Text::Minify::X
 trailing whitespace from text content.
 
 It will be disabled if the `psgix.no-minify` environment key is set
-to a true value.
+to a true value. (Added in v0.2.0.)
 
 # ATTRIBUTES
 
