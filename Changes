@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.2.0    2021-05-21 14:05:48+01:00 Europe/London
   [Enhancements]
   - Do not minify if the `psgix.no-minify` key is true.
 
