@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.2.1    2021-09-19 11:26:10+01:00 Europe/London
   [Bug Fixes]
   - Upgrade minimum version of Text::Minify::XS to v0.4.8 to improve
     handling of malformed UTF-8.
