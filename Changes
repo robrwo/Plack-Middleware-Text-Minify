@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Documentation]
+  - Change ABSTRACT to match corresponding Mojo plugin.
 
 v0.2.1    2021-09-19 11:26:10+01:00 Europe/London
   [Bug Fixes]

@@ -1,6 +1,6 @@
 package Plack::Middleware::Text::Minify;
 
-# ABSTRACT: minify text responses on the fly
+# ABSTRACT: remove HTML indentation on the fly
 
 use v5.9.3;
 

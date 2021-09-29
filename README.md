@@ -1,6 +1,6 @@
 # NAME
 
-Plack::Middleware::Text::Minify - minify text responses on the fly
+Plack::Middleware::Text::Minify - remove HTML indentation on the fly
 
 # VERSION
 
