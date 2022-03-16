@@ -62,11 +62,10 @@ sub call {
                 return unless $type =~ m{^text/};
             }
 
-            my $body = $res->[2];
-            return unless is_arrayref($body);
+            my $body = "";
+            Plack::Util::foreach( $res->[2], sub { $body .= $_[0] } );
 
-            $res->[2] = [ Text::Minify::XS::minify( join("", @$body ) ) ];
-
+            $res->[2] = [ Text::Minify::XS::minify($body) ];
 
             if (Plack::Util::header_exists( $res->[1], 'content-length' )) {
                 Plack::Util::header_set( $res->[1], 'content-length', length( $res->[2][0] ) );

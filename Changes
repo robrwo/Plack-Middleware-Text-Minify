@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Minify IO::Handle bodies.
 
 v0.2.2    2021-09-29 17:24:50+01:00 Europe/London
   [Documentation]
