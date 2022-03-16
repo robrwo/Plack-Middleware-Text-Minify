@@ -4,7 +4,7 @@ Plack::Middleware::Text::Minify - remove HTML indentation on the fly
 
 # VERSION
 
-version v0.2.3
+version v0.3.0
 
 # SYNOPSIS
 

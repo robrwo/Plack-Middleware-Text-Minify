@@ -16,7 +16,7 @@ use Text::Minify::XS v0.4.8 ();
 
 # RECOMMEND PREREQ:  Ref::Util::XS
 
-our $VERSION = 'v0.2.3';
+our $VERSION = 'v0.3.0';
 
 sub call {
     my ($self, $env) = @_;
