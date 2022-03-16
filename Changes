@@ -4,6 +4,9 @@ Revision history for {{ $dist->name }}:
   [Enhancements]
   - Minify IO::Handle bodies.
 
+  [Documentation]
+  - Fix encoding of links in README.
+
 v0.2.2    2021-09-29 17:24:50+01:00 Europe/London
   [Documentation]
   - Change ABSTRACT to match corresponding Mojo plugin.
