@@ -62,10 +62,15 @@ sub call {
                 return unless $type =~ m{^text/};
             }
 
-            my $body = "";
-            Plack::Util::foreach( $res->[2], sub { $body .= $_[0] } );
-
-            $res->[2] = [ Text::Minify::XS::minify($body) ];
+            my $body = $res->[2];
+            if ( is_arrayref($body) ) {    # no reason to call a function for each line in the body
+                $res->[2] = [ Text::Minify::XS::minify( join( "", @$body ) ) ];
+            }
+            else {
+                my $text = "";
+                Plack::Util::foreach( $body, sub { $text .= $_[0] } );
+                $res->[2] = [ Text::Minify::XS::minify($text) ];
+            }
 
             if (Plack::Util::header_exists( $res->[1], 'content-length' )) {
                 Plack::Util::header_set( $res->[1], 'content-length', length( $res->[2][0] ) );

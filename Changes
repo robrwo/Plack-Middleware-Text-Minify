@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Improve the performance for non-IO::Handle bodies.
 
 v0.3.0    2022-03-16 15:38:02+00:00 Europe/London
   [Enhancements]
