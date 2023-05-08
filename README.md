@@ -52,12 +52,14 @@ arguments.
 
 By default, it will match against any "text/" MIME type.
 
-# KNOWN ISSUES
-
-## Support for older Perl versions
+# SUPPORT FOR OLDER PERL VERSIONS
 
 This module requires Perl v5.9.3 or newer, which is the minimum
 version supported by [Text::Minify::XS](https://metacpan.org/pod/Text%3A%3AMinify%3A%3AXS).
+
+Future releases may only support Perl versions released in the last ten years.
+
+# KNOWN ISSUES
 
 ## Use with templating directive that collapse whitespace
 

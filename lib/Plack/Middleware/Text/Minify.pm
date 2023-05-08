@@ -124,12 +124,14 @@ arguments.
 
 By default, it will match against any "text/" MIME type.
 
-=head1 KNOWN ISSUES
-
-=head2 Support for older Perl versions
+=head1 SUPPORT FOR OLDER PERL VERSIONS
 
 This module requires Perl v5.9.3 or newer, which is the minimum
 version supported by L<Text::Minify::XS>.
+
+Future releases may only support Perl versions released in the last ten years.
+
+=head1 KNOWN ISSUES
 
 =head2 Use with templating directive that collapse whitespace
 
