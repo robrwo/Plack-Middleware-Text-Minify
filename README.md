@@ -54,10 +54,13 @@ By default, it will match against any "text/" MIME type.
 
 # SUPPORT FOR OLDER PERL VERSIONS
 
-This module requires Perl v5.9.3 or newer, which is the minimum
-version supported by [Text::Minify::XS](https://metacpan.org/pod/Text%3A%3AMinify%3A%3AXS).
+This module requires Perl v5.14 or newer.
 
 Future releases may only support Perl versions released in the last ten years.
+
+If you need this module on Perl v5.9.3, please use one of the v0.3.x
+versions of this module.  Significant bug or security fixes may be
+backported to those versions.
 
 # KNOWN ISSUES
 
