@@ -1,6 +1,11 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Tests]
+  - Migrated tests to use Test2.
+
+  - Removed use of Test::Most.
+
   [Other]
   - Bumped the minimum version of Text::Minify::XS to v0.7.0.
 
