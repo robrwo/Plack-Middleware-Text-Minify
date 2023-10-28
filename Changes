@@ -1,6 +1,8 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+
+v0.4.1    2023-10-28 09:34:02+01:00 Europe/London
   [Tests]
   - Migrated tests to use Test2.
 
