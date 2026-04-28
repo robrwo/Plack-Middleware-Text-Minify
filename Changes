@@ -1,6 +1,9 @@
 Revision history for {{ $dist->name }}:
 
 {{$NEXT}}
+  [Security]
+  - Bumped the minimum version of Text::Minify::XS for a security fix.
+
   [Documentation]
   - Added security policy.
 
