@@ -9,6 +9,8 @@ Revision history for {{ $dist->name }}:
 
   - Updated copyright year.
 
+  - Updated maintainer email address due to closure of cpan.org email.
+
   [Tests]
   - Improved author tests.
 
