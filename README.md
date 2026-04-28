@@ -95,7 +95,7 @@ e.g. `pre` or `textarea`.
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/Plack-Middleware-Text-Minify](https://github.com/robrwo/Plack-Middleware-Text-Minify)
-and may be cloned from [git://github.com/robrwo/Plack-Middleware-Text-Minify.git](git://github.com/robrwo/Plack-Middleware-Text-Minify.git)
+and may be cloned from [https://github.com/robrwo/Plack-Middleware-Text-Minify.git](https://github.com/robrwo/Plack-Middleware-Text-Minify.git)
 
 # BUGS
 
