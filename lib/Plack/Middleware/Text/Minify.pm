@@ -80,6 +80,8 @@ sub call {
 
 }
 
+=for stopwords minifier
+
 =head1 SYNOPSIS
 
   use Plack::Builder;
@@ -105,7 +107,7 @@ to a true value. (Added in v0.2.0.)
 =attr path
 
 This is a regex or callback that matches against C<PATH_INFO>.  If it
-does not match, then the response won't be minified.
+does not match, then the response won't be processed.
 
 The callback takes the C<PATH_INFO> and Plack environment as arguments.
 
@@ -115,9 +117,9 @@ codes with no bodies, or request methods other than C<GET> or C<POST>.
 =attr type
 
 This is a regex or callback that matches against the content-type. If it
-does not match, then the response won't be minified.
+does not match, then the response won't be processed.
 
-The callback takes the content-type header and the Plack reponse as
+The callback takes the content-type header and the Plack response as
 arguments.
 
 By default, it will match against any "text/" MIME type.
@@ -127,10 +129,6 @@ By default, it will match against any "text/" MIME type.
 This module requires Perl v5.14 or newer.
 
 Future releases may only support Perl versions released in the last ten years.
-
-If you need this module on Perl v5.9.3, please use one of the v0.3.x
-versions of this module.  Significant bug or security fixes may be
-backported to those versions.
 
 =head1 KNOWN ISSUES
 

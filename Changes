@@ -11,10 +11,22 @@ Revision history for {{ $dist->name }}:
 
   - Updated maintainer email address due to closure of cpan.org email.
 
-  [Tests]
-  - Improved author tests.
+  - Updated support policy.
 
+  - Fixed typos.
+
+  - README is build by the UsefulReadme plugin.
+
+  [Tests]
+  - Moved author tests into xt.
+
+  - Added and improved author tests.
+
+  [Toolchain]
   - Removed the use of Dist::Zilla::Plugin::ManifestSkip.
+
+  [Other]
+  - Added doap.xml to the repo.
 
 v0.4.1    2023-10-28 09:34:02+01:00 Europe/London
   [Tests]
